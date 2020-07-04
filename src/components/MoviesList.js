@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { getMovies } from "../actions/movies";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Spinner from "./Spinner";
 
 const MoviesList = ({ getMovies, films }) => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const MoviesList = ({ getMovies, films }) => {
           </li>
         ))
       ) : (
-        <h2>Loading</h2>
+        <Spinner />
       )}
     </ul>
     // <h2>movies list</h2>
