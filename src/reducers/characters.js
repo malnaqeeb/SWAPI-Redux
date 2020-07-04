@@ -1,4 +1,4 @@
-import { MOVIE_CHARACTERS } from "../actions/types";
+import { MOVIE_CHARACTERS, GET_MOVIES } from "../actions/types";
 
 const initialState = [];
 
@@ -7,6 +7,8 @@ export default function (state = initialState, action) {
   switch (type) {
     case MOVIE_CHARACTERS:
       return payload;
+    case GET_MOVIES:
+      return {};
     default:
       return state;
   }

@@ -7,11 +7,11 @@ export const getCharacters = (userId) => async (dispatch) => {
     if (!res.ok) {
       throw new Error("sometheing went wrong");
     }
-    const getData = await res.json();
-    const characters = await getData.characters;
+    const data = await res.json();
+    const characters = await data.characters;
     const filmInfo = {
-      title: getData.title,
-      story: getData.opening_crawl,
+      title: data.title,
+      story: data.opening_crawl,
     };
 
     let people = [];

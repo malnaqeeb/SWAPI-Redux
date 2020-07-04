@@ -16,7 +16,7 @@ const MoviesList = ({ getMovies, films }) => {
       {films ? (
         films.map((film) => (
           <li key={uuidv4()}>
-            <Link to={`/${film.episode_id}`}>
+            <Link to={`/${film.url.slice(-2)}`}>
               <div>
                 <h2>{film.title}</h2>
               </div>
