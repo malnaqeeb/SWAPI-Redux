@@ -1,0 +1,9 @@
+ul {
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}

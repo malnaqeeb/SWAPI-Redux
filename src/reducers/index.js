@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import films from "./films";
-import characters from "./characters";
+import filmslist from "./filmslist";
+import filmdetails from "./filmdetails";
 
 export default combineReducers({
-  films,
-  characters,
+  filmslist,
+  filmdetails,
 });

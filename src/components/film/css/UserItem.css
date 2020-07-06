@@ -1,0 +1,169 @@
+body {
+  background-color: black;
+}
+.wrapper-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+.box1-header {
+  grid-column: 1;
+  display: flex;
+  width: 100%;
+  height: 38vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: url(https://i.postimg.cc/25mNW1Xj/starwarposter1.jpg) 90% 50%
+    no-repeat;
+  box-shadow: 0px 0px 18px 0px white;
+  border-radius: 40px;
+  color: white;
+}
+.box2-header h1 {
+  color: wheat;
+  text-shadow: 6px 6px 10px wheat;
+  margin-bottom: 30px;
+}
+.box2-header h3 {
+  color: wheat;
+  margin-top: 20px;
+}
+.box2-header {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  grid-gap: 30px;
+}
+.box2-header-1 {
+  grid-column: 1;
+  padding: 20px;
+}
+.box2-header-2 {
+  grid-column: 2;
+  padding: 20px;
+}
+
+.char-name {
+  display: flex;
+}
+
+span {
+  margin-left: 5px;
+  justify-content: center;
+}
+li {
+  width: 45%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 18px 0px white;
+  margin: 15px;
+  padding: 10px;
+  background-color: gray;
+}
+.more-info {
+  display: flex;
+  font-size: 1em;
+}
+.wrapper-li-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1px;
+}
+.nested {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.nested > div {
+  border: #333;
+}
+
+.box1-row1 img {
+  /* width: 75%; */
+  /* height: 7rem; */
+  /* display: flex; */
+  /* margin-left: 10px; */
+  /* margin-top: 2px; */
+  display: block;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 15px 0px white;
+}
+.box1 {
+  grid-column: 1;
+  /* box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.6); */
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 8fr 1fr;
+  grid-gap: 5px;
+}
+.box2 {
+  grid-column: 2/ 3;
+  /* box-shadow: 0px 0px 7px 0px whitesmoke; */
+  border-radius: 10px;
+  /* background-color: darkslategrey; */
+  padding: 15px;
+  color: white;
+}
+.box2 h5 {
+  /* text-align: center; */
+  border-radius: 10px;
+  padding: 0px;
+  color: wheat;
+}
+.box3 {
+  grid-column: 3;
+  display: grid;
+  /* box-shadow: 0px 0px 7px 0px whitesmoke; */
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+}
+.box3 h4 {
+  /* text-align: center; */
+  border-radius: 10px;
+  padding: 0px;
+  color: wheat;
+}
+.box4 {
+  grid-column: 4;
+  display: grid;
+  /* box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.6); */
+  border-radius: 10px;
+  padding: 15px;
+  color: whitesmoke;
+}
+.box4 h4 {
+  /* text-align: center; */
+  border-radius: 10px;
+  padding: 0px;
+  color: wheat;
+}
+
+.box1-row1 {
+  grid-row: 1;
+  padding: 5px;
+
+  /* border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  background-image: initial; */
+  /* width: 4rem;
+  height: 4rem;
+  margin-right: 1rem; */
+}
+.box1-row2 {
+  grid-row: 2;
+  margin: auto;
+}
+
+.box1-row2 h3 {
+  border-radius: 10px;
+  padding: 0px;
+  color: wheat;
+  text-shadow: 6px 6px 10px wheat;
+  text-align: center;
+}

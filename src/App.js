@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MoviesList from "./components/MoviesList";
-import MoviesCharacters from "./components/FetchFilmsInfo";
+import FilmsList from "./components/filmlist/FilmsList";
+import GetFilmInfo from "./components/film/js/GetFilmInfo";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -12,8 +12,8 @@ function App() {
       <Provider store={store}>
         <Router>
           <Switch>
-            <Route exact path="/" component={MoviesList} />
-            <Route exact path="/:id" component={MoviesCharacters} />
+            <Route exact path="/" component={FilmsList} />
+            <Route exact path="/:id" component={GetFilmInfo} />
           </Switch>
         </Router>
       </Provider>

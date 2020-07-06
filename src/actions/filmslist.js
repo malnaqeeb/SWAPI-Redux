@@ -2,7 +2,7 @@ import { GET_MOVIES, MOVIES_ERROR } from "./types";
 
 // Get all Movies
 
-export const getMovies = () => async (dispatch) => {
+export const getFilms = () => async (dispatch) => {
   try {
     const res = await fetch("https://swapi.dev/api/films");
     if (!res.ok) {

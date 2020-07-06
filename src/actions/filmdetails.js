@@ -5,23 +5,26 @@ export const getCharacters = (userId) => async (dispatch) => {
   try {
     const res = await fetch(`https://swapi.dev/api/films/${userId}`);
     if (!res.ok) {
-      throw new Error("sometheing went wrong");
+      throw new Error("something went wrong");
     }
     const data = await res.json();
     const characters = await data.characters;
     const filmInfo = {
       title: data.title,
       story: data.opening_crawl,
+      director: data.director,
+      producer: data.producer,
+      release_date: data.release_date,
     };
 
-    let people = [];
+    let filmcharacters = [];
     // fetch array of URL's
     await Promise.all(
       characters.map((url) =>
         fetch(url)
           .then((response) => response.json())
           .then(async (name) =>
-            people.push({
+            filmcharacters.push({
               name: name.name,
               films: await Promise.all(
                 name.films.map((film) =>
@@ -66,7 +69,7 @@ export const getCharacters = (userId) => async (dispatch) => {
 
     dispatch({
       type: MOVIE_CHARACTERS,
-      payload: { people, filmInfo },
+      payload: { filmcharacters, filmInfo },
     });
   } catch (err) {
     dispatch({
