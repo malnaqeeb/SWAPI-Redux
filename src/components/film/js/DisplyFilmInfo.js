@@ -21,17 +21,6 @@ const FilmsCharacters = ({ filmcharacters, filmInfo }) => {
       setFilterDisplay(filmcharacters);
     }
   };
-
-  // const filterUsers = (filmcharacters, input) => {
-  //   const reqex = new RegExp(`^${input}`, "gi");
-  //   // filmcharacters !== null &&
-  //   const filtered = filmcharacters.filter(
-  //     (user) => typeof user.name === "string" && user.name.match(reqex)
-  //   );
-  //   console.log(filtered);
-  //   return filtered;
-  // };
-
   return (
     <div className="movie-container">
       <div className="wrapper-header">
