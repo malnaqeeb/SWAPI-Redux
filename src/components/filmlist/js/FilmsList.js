@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import PropTypes from "prop-types";
-import { getFilms } from "../../actions/filmslist";
+import { getFilms } from "../../../actions/filmslist";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Spinner from "../Spinner";
-import "../filmlist/css/filmlist.css";
+import Spinner from "../../Spinner";
+import "../css/filmlist.css";
 
 const FilmsList = ({ getFilms, filmslist }) => {
   useEffect(() => {
