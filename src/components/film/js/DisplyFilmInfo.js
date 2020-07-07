@@ -11,10 +11,6 @@ const FilmsCharacters = ({ filmcharacters, filmInfo }) => {
   const [filterDisplay, setFilterDisplay] = useState(filmcharacters);
 
   const cover = MoviesCover.filter((cover) => cover.name === filmInfo.title);
-  // const cover = MoviesCover.filter((cover) =>
-  //   cover.src.localeCompare(filmInfo.title)
-  // );
-  console.log("cover", cover);
 
   const handleChange = (e) => {
     setInput(e);
@@ -32,7 +28,7 @@ const FilmsCharacters = ({ filmcharacters, filmInfo }) => {
     <div className="movie-container">
       <div className="wrapper-header">
         <div className="box1-header">
-          <img src={cover[0].src} alt={filmInfo.title} />
+          {/* <img src={cover[0].src} alt={filmInfo.title} /> */}
         </div>
         <div className="box2-header">
           <div className="box2-header-1">
