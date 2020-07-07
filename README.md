@@ -2,7 +2,7 @@
 
 This project was build with ReactJS & Redux
 
-## `npm install` to install dependencies
+### `npm install` to install dependencies
 
 In the project directory, you can run:
 
@@ -10,3 +10,6 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br />
 Open [https://localhost:3000](https://localhost:3000) to view it in the browser.
+
+### deployed on Netlifly
+https://swapi-redux.netlify.app/
