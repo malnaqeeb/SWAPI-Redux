@@ -28,7 +28,7 @@ const FilmsCharacters = ({ filmcharacters, filmInfo }) => {
     <div className="movie-container">
       <div className="wrapper-header">
         <div className="box1-header">
-          {/* <img src={cover[0].src} alt={filmInfo.title} /> */}
+          <img src={cover[0].src} alt={filmInfo.title} />
         </div>
         <div className="box2-header">
           <div className="box2-header-1">
@@ -60,10 +60,10 @@ const FilmsCharacters = ({ filmcharacters, filmInfo }) => {
               <li key={uuidv4()} className="wrapper-li-content">
                 <div className="box box1">
                   <div className="box1-row1">
-                    {/* <img
+                    <img
                       src="https://i.postimg.cc/HnSM4tjH/C-3PO1.jpg"
                       alt={character.name}
-                    /> */}
+                    />
                   </div>
 
                   <div className="box1-row2">
