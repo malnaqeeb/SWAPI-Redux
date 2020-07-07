@@ -86,6 +86,10 @@ const FilmsCharacters = ({ filmcharacters, filmInfo }) => {
                     <h5>Hair Color:</h5>
                     <span>{character.hair_color}</span>
                   </div>
+                  <div className="more-info">
+                    <h5>Homeworld:</h5>
+                    <span>{character.homeworld}</span>
+                  </div>
                 </div>
                 <div className="box box3">
                   <div style={{ width: "100%" }}>

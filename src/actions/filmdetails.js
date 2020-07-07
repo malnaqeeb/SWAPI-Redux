@@ -18,12 +18,14 @@ export const getCharacters = (userId) => async (dispatch) => {
       release_date: data.release_date,
     };
 
+    const newHttp = "https";
     let filmcharacters = [];
     // to prevent mixed content error when deploying we need to all the fetched url to start with (https) instead of (http)
     const newHttps = (url) => {
-      const newHttp = "https";
       return url.map((u) => newHttp.concat(u.slice(4)));
     };
+    console.log("newHttps", newHttps(characters));
+    console.log("characters", characters);
     // fetch array of URL's
     await Promise.all(
       newHttps(characters).map((url) =>
@@ -57,7 +59,7 @@ export const getCharacters = (userId) => async (dispatch) => {
                     .then((res) => res.name)
                 )
               ),
-              homeworld: await fetch(name.homeworld)
+              homeworld: await fetch(newHttp.concat(name.homeworld.slice(4)))
                 .then((response) => response.json())
                 .then((res) => res.name),
               vehicles: await Promise.all(
