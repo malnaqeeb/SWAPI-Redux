@@ -6,7 +6,7 @@ export const getFilms = () => async (dispatch) => {
   try {
     const res = await fetch("https://swapi.dev/api/films");
     if (!res.ok) {
-      throw new Error("sometheing went wrong");
+      throw new Error("something went wrong");
     }
     const getData = await res.json();
     dispatch({

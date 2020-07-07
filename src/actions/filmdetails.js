@@ -9,6 +9,7 @@ export const getCharacters = (userId) => async (dispatch) => {
     }
     const data = await res.json();
     const characters = await data.characters;
+
     const filmInfo = {
       title: data.title,
       story: data.opening_crawl,
@@ -18,16 +19,21 @@ export const getCharacters = (userId) => async (dispatch) => {
     };
 
     let filmcharacters = [];
+    // to prevent mixed content error when deploying we need to all the fetched url to start with (https) instead of (http)
+    const newHttps = (url) => {
+      const newHttp = "https";
+      return url.map((u) => newHttp.concat(u.slice(4)));
+    };
     // fetch array of URL's
     await Promise.all(
-      characters.map((url) =>
+      newHttps(characters).map((url) =>
         fetch(url)
           .then((response) => response.json())
           .then(async (name) =>
             filmcharacters.push({
               name: name.name,
               films: await Promise.all(
-                name.films.map((film) =>
+                newHttps(name.films).map((film) =>
                   fetch(film)
                     .then((response) => response.json())
                     .then((res) => res.title)
@@ -38,14 +44,14 @@ export const getCharacters = (userId) => async (dispatch) => {
               gender: name.gender,
               hair_color: name.hair_color,
               species: await Promise.all(
-                name.species.map((specie) =>
+                newHttps(name.species).map((specie) =>
                   fetch(specie)
                     .then((response) => response.json())
                     .then((res) => res.name)
                 )
               ),
               starships: await Promise.all(
-                name.starships.map((starship) =>
+                newHttps(name.starships).map((starship) =>
                   fetch(starship)
                     .then((response) => response.json())
                     .then((res) => res.name)
@@ -55,7 +61,7 @@ export const getCharacters = (userId) => async (dispatch) => {
                 .then((response) => response.json())
                 .then((res) => res.name),
               vehicles: await Promise.all(
-                name.vehicles.map((vehicle) =>
+                newHttps(name.vehicles).map((vehicle) =>
                   fetch(vehicle)
                     .then((response) => response.json())
                     .then((res) => res.name)
