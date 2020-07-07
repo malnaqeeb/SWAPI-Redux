@@ -2,7 +2,7 @@
 
 This project was build with ReactJS & Redux
 
-## `npm install` to install dependencies
+### `npm install` to install dependencies
 
 In the project directory, you can run:
 
