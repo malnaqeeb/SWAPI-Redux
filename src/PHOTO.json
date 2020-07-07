@@ -1,0 +1,26 @@
+[
+  {
+    "name": "A New Hope",
+    "src": "https://i.postimg.cc/2SYhP1dv/A-New-Hope.jpg"
+  },
+  {
+    "name": "Attack of the Clones",
+    "src": "https://i.postimg.cc/MX2KfjZY/Attack-of-the-Clones.jpg"
+  },
+  {
+    "name": "Return of the Jedi",
+    "src": "https://i.postimg.cc/c4wf9R30/Return-of-the-Jedi.jpg"
+  },
+  {
+    "name": "Revenge of the Sith",
+    "src": "https://i.postimg.cc/pV9f8bX9/Revenge-of-the-Sith.jpg"
+  },
+  {
+    "name": "The Empire Strikes Back",
+    "src": "https://i.postimg.cc/gcfvHSng/The-Empire-Strikes-Back.jpg"
+  },
+  {
+    "name": "The Phantom Menace",
+    "src": "https://i.postimg.cc/K85BFmQW/The-Phantom-Menace.jpg"
+  }
+]
