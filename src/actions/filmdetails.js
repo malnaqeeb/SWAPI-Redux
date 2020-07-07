@@ -24,8 +24,6 @@ export const getCharacters = (userId) => async (dispatch) => {
     const newHttps = (url) => {
       return url.map((u) => newHttp.concat(u.slice(4)));
     };
-    console.log("newHttps", newHttps(characters));
-    console.log("characters", characters);
     // fetch array of URL's
     await Promise.all(
       newHttps(characters).map((url) =>
