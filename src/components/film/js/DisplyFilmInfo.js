@@ -2,8 +2,8 @@ import React, { useState } from "react";
 // import { Input } from "semantic-ui-react";
 import { v4 as uuidv4 } from "uuid";
 import MoviesCover from "../../../PHOTO.json";
-import "../css/UserItem.css";
-import "../css/UsersList.css";
+import "../css/CharactersPage.css";
+import "../css/CharactersList.css";
 import "../css/input.css";
 
 const FilmsCharacters = ({ filmcharacters, filmInfo }) => {
